@@ -1,53 +1,94 @@
-# MIRNet Low-Light Image Enhancement
+Sure! Here's a polished and professional version of your project README for **MIRNet Low-Light Image Enhancement**:
 
-This project implements the MIRNet model for low-light image enhancement using TensorFlow and Keras.
+---
 
-## Setup
+# 🌙 MIRNet for Low-Light Image Enhancement
 
-1. Create a virtual environment (recommended):
+This project implements the **MIRNet** (Multi-Scale Residual Network) model using **TensorFlow** and **Keras** to enhance images captured in low-light conditions. It leverages advanced attention mechanisms and residual learning for high-quality image restoration.
+
+---
+
+## 🚀 Project Setup
+
+### 1. Create a Virtual Environment (Recommended)
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. Install dependencies:
+### 2. Install Required Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+---
 
-Run the main script:
+## 🛠️ How to Use
+
+Simply run the main script:
+
 ```bash
 python main.py
 ```
 
-The script will:
-1. Download the LOL dataset
-2. Train the MIRNet model
-3. Save the best model as 'best_model.h5'
-4. Create a 'results' directory with enhanced images
-5. Show comparisons between original, PIL autocontrast, and MIRNet enhanced images
+This will:
 
-## Model Architecture
+* 📥 Automatically download the **LOL (Low-Light) Dataset**
+* 🧠 Train the **MIRNet** model
+* 💾 Save the best-performing model as `best_model.h5`
+* 📂 Generate enhanced outputs in a `results/` directory
+* 📊 Display side-by-side comparisons:
 
-The MIRNet model uses a multi-scale residual network architecture with:
-- Multi-scale feature extraction
-- Parallel attention mechanisms
-- Residual learning
-- Skip connections
+  * Original Image
+  * PIL Autocontrast
+  * MIRNet Enhanced Image
 
-## Training
+---
 
-The model is trained using:
-- Charbonnier loss function
-- Adam optimizer
-- Peak Signal-to-Noise Ratio (PSNR) metric
-- Early stopping to prevent overfitting
+## 🧬 Model Architecture
 
-## Results
+MIRNet follows a robust **multi-scale residual network** design, which includes:
 
-Results are saved in the 'results' directory:
-- Enhanced images
-- Comparison plots
-- Training history plots 
+* 🔁 **Multi-scale feature extraction**
+* 👁️ **Parallel attention mechanisms** (spatial + channel attention)
+* 🔄 **Residual learning** for detail preservation
+* 🔗 **Skip connections** for stable training and gradient flow
+
+---
+
+## 📈 Training Details
+
+* 🎯 **Loss Function:** Charbonnier Loss (robust to outliers)
+* ⚙️ **Optimizer:** Adam
+* 📐 **Evaluation Metric:** PSNR (Peak Signal-to-Noise Ratio)
+* ⏹️ **Early Stopping:** Applied to prevent overfitting and ensure generalization
+
+---
+
+## 📷 Results
+
+All outputs are saved in the `results/` directory and include:
+
+* ✅ Enhanced low-light images
+* 🆚 Comparison plots (Original vs Autocontrast vs MIRNet)
+* 📉 Training metrics and loss history
+
+---
+
+## 📌 Note
+
+* For best performance, use a GPU-enabled machine.
+* Ensure internet connectivity for dataset download.
+
+---
+
+## 📚 References
+
+* [MIRNet Paper (ECCV 2020)](https://openaccess.thecvf.com/content_ECCV_2020/html/Zamir_Learning_Enriched_Features_for_Real_Image_Restoration_and_Enhancement_ECCV_2020_paper.html)
+* [LOL Dataset](https://daooshee.github.io/BMVC2018website/)
+
+---
+
+Let me know if you'd like a version with badges, GIFs, or project structure included!
