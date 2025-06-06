@@ -45,7 +45,6 @@ This will:
   * PIL Autocontrast
   * MIRNet Enhanced Image
 
----
 
 ## 🧬 Model Architecture
 
